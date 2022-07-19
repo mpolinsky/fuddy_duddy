@@ -1,6 +1,7 @@
 import streamlit as st
 import english_words as ew
 from datetime import datetime as dt
+from collections import Counter as Co
 
 st.title('Counter Example')
 
@@ -21,6 +22,9 @@ if 'choice' not in st.session_state:
 if 'count' not in st.session_state:
     st.session_state.count = 0
     st.write("ONE TIME")
+
+if 'counter' not in st.session_state:
+	st.session_state.counter_1 = Co(st.session_state.name)
     
 st.write(st.session_state.choice)
 st.session_state.name = st.text_input('nameo: ')
