@@ -57,8 +57,8 @@ if 'counter1' not in st.session_state:
 reset_counter(st.session_state.name)
 
 
-#if st.session_state.count > 2:
- #   st.session_state.res = st.session_state.res[:-1]
+if st.session_state.count > 2:
+    st.session_state.res = st.session_state.res[:-1]
 
 st.write('Count = ', st.session_state.count)
 
