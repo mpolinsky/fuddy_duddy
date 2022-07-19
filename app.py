@@ -56,7 +56,7 @@ st.write('Count = ', st.session_state.count)
 
 option = st.selectbox(
 'Select:',
-shrink_pool(st.session_state.counter, st.session_state.word_pool)
+shrink_pool(st.session_state.counter1, st.session_state.word_pool)
 )
 st.write(f"You chose {option}")
     
