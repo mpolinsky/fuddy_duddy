@@ -46,7 +46,6 @@ if 'choice' not in st.session_state:
 # If count is already initialized, don't do anything
 if 'count' not in st.session_state:
     st.session_state.count = 0
-    st.write("ONE TIME")
 	
 if 'name' not in st.session_state or st.session_state.name == "":
     st.session_state.name = st.text_input("Enter name")
@@ -57,7 +56,7 @@ if 'counter1' not in st.session_state:
 reset_counter(st.session_state.name)
 
 
-if st.session_state.count > 2:
+if st.session_state.count > 3:
     st.session_state.res = st.session_state.res[:-1]
 
 st.write('Count = ', st.session_state.count)
