@@ -8,6 +8,14 @@ st.title('Counter Example')
 if 'res' not in st.session_state:
 	st.session_state.res = list()
 
+	
+option = st.selectbox(
+     'How would you like to be contacted?',
+     ('Email', 'Home phone', 'Mobile phone'))
+
+st.write('You selected:', option)
+	
+	
 
 # If no, then initialize count to 0
 # If count is already initialized, don't do anything
