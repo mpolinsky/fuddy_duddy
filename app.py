@@ -42,7 +42,8 @@ if st.session_state.count > 5:
 with st.form(key=str(dt.now())):	
 	option = st.selectbox(
 	'Select:',
-	st.session_state.word_pool)
+	shrink_pool(st.session_state.counter_1, st.session_state.word_pool)
+	)
 	submit = st.form_submit_button("submit")
 	if submit:
 		st.write('You selected:', option)
