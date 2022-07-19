@@ -45,11 +45,13 @@ if 'count' not in st.session_state:
     st.session_state.count = 0
     st.write("ONE TIME")
 
+if 'name' in st.session_state and 'counter1' not in st.session_state:
+    st.session_state.counter1 = Co(st.session_state.name)
+	
 if 'name' not in st.session_state or st.session_state.name == "":
     st.session_state.name = st.text_input("Enter name")
 	
-if 'counter1' not in st.session_state:
-    st.session_state.counter1 = Co(st.session_state.name)
+
 
 
 st.write('Count = ', st.session_state.count)
