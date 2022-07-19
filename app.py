@@ -29,7 +29,7 @@ if decrement:
 
 
 st.write('Count = ', st.session_state.count)
-
+st.write(st.session_state.name)
 
 if st.session_state.count > 5:
     st.session_state.res.append('red')
