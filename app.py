@@ -50,7 +50,8 @@ if 'name' not in st.session_state or st.session_state.name == "":
 	
 if 'counter1' not in st.session_state:
     st.session_state.counter1 = Co(st.session_state.name)
-
+else:
+    st.subheader(st.session_state.counter1)
 st.write('Count = ', st.session_state.count)
 
 option = st.selectbox(
@@ -65,6 +66,8 @@ st.subheader(st.session_state.counter1)
 
 if st.session_state.count > 1:
     st.session_state.counter1 -= Co(st.session_state.res[st.session_state.count])
+	
+st.subheader(st.session_state.counter1)
 	
 st.session_state.count += 1
 
