@@ -43,7 +43,7 @@ with st.form(key=str(dt.now())):
 	option = st.selectbox(
 	    'Select:',
 	    st.session_state.word_pool)
-	submit = st.form_submit_button("submit", key=str(dt.now()))
+	submit = st.form_submit_button("submit")
 	if submit:
 	    st.write('You selected:', option)
 	    st.session_state.choice = option	
