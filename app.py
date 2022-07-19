@@ -68,18 +68,15 @@ st.write('Count = ', st.session_state.count)
 if st.session_state.count > 5:
     st.session_state.res.append('red')
 
-with st.form(key=str(dt.now())):	
-    option = st.selectbox(
-    'Select:',
-    shrink_pool(st.session_state.counter_1, st.session_state.word_pool)
-    )
-    st.write(f"You chose {option}")
-    submit = st.form_submit_button("submit")
-    if submit:
-        st.write(f"You chose {option}")
-        st.write('You selected:', option)
-        st.session_state.choice = option	
-        st.session_state.res.append(st.session_state.choice)
+	
+option = st.selectbox(
+'Select:',
+shrink_pool(st.session_state.counter_1, st.session_state.word_pool)
+)
+st.write(f"You chose {option}")
+    
+st.session_state.choice = option	
+st.session_state.res.append(st.session_state.choice)
 
 st.write(st.session_state)
 
