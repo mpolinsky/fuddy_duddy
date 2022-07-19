@@ -5,6 +5,10 @@ st.title('Counter Example')
 # Streamlit runs from top to bottom on every iteraction so
 # we check if `count` has already been initialized in st.session_state.
 
+if 'res' not in st.session_state:
+	st.session_state.res = list()
+
+
 # If no, then initialize count to 0
 # If count is already initialized, don't do anything
 if 'count' not in st.session_state:
@@ -20,4 +24,9 @@ decrement = st.button('Decrement')
 if decrement:
     st.session_state.count -= 1
 
+
 st.write('Count = ', st.session_state.count)
+
+
+if st.session_state.count > 5:
+    st.session_state.res.append('red')
