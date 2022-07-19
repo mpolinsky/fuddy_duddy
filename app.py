@@ -69,7 +69,7 @@ if st.session_state.count > 1:
 st.session_state.count += 1
 
 if st.session_state.counter1 == {}:
-    st.subheader(' '.join(st.session_state.res))
+    st.subheader(' '.join(st.session_state.res[2:]))
 
 st.button("Next")
 
