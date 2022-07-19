@@ -78,5 +78,9 @@ st.write(f"You chose {option}")
 st.session_state.choice = option	
 st.session_state.res.append(st.session_state.choice)
 
+st.session_state.counter_1 -= Co(st.session_state.res[st.session_state.count])
+st.session_state.count += 1
+
+
 st.write(st.session_state)
 
