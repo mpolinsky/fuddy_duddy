@@ -33,24 +33,18 @@ decrement = st.button('Decrement')
 if decrement:
     st.session_state.count -= 1
 
-
-
 st.write('Count = ', st.session_state.count)
-st.write(st.session_state)
 
 if st.session_state.count > 5:
     st.session_state.res.append('red')
-
-
-
 	
 option = st.selectbox(
     'How would you like to be contacted?',
-    ('Email', 'Home phone', 'Mobile phone'))
+    st.session_state.word_pool)
 
 st.write('You selected:', option)
 
 st.session_state.choice = option	
 
+st.write(st.session_state)
 
-st.write(st.session_state.res)
