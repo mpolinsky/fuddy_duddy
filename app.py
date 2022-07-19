@@ -26,6 +26,11 @@ def shrink_pool(current_name_counter, word_pool):
     return newpool
 
 
+@st.cache(allow_output_mutation=True)
+def reset_counter(a_name):
+    st.session_state.counter1 = Co(st.session_state.name)
+
+
 
 # Streamlit runs from top to bottom on every iteraction so
 # we check if `count` has already been initialized in st.session_state.
@@ -44,15 +49,14 @@ if 'choice' not in st.session_state:
 if 'count' not in st.session_state:
     st.session_state.count = 0
     st.write("ONE TIME")
-
-if 'name' in st.session_state and 'counter1' not in st.session_state:
-    st.session_state.counter1 = Co(st.session_state.name)
 	
 if 'name' not in st.session_state or st.session_state.name == "":
     st.session_state.name = st.text_input("Enter name")
-	
 
+if 'counter1' not in st.session_state:
+    st.session_state.counter1 = Co(st.session_state.name)
 
+reset_counter(st.session_state.name)
 
 st.write('Count = ', st.session_state.count)
 
