@@ -49,26 +49,11 @@ if 'name' not in st.session_state or st.session_state.name == "":
 	
 if 'counter' not in st.session_state:
     st.session_state.counter_1 = Co(st.session_state.name)
-	
 
-
-
-# Create a button which will increment the counter
-increment = st.button('Increment')
-if increment:
-    st.session_state.count += 1
-
-# A button to decrement the counter
-decrement = st.button('Decrement')
-if decrement:
-    st.session_state.count -= 1
 
 st.write('Count = ', st.session_state.count)
 
-if st.session_state.count > 5:
-    st.session_state.res.append('red')
 
-	
 option = st.selectbox(
 'Select:',
 shrink_pool(st.session_state.counter_1, st.session_state.word_pool)
@@ -77,10 +62,11 @@ st.write(f"You chose {option}")
     
 st.session_state.choice = option	
 st.session_state.res.append(st.session_state.choice)
-
-st.session_state.counter_1 -= Co(st.session_state.res[st.session_state.count])
+if st.session_state.count > 1:
+	st.session_state.counter_1 -= Co(st.session_state.res[st.session_state.count])
 st.session_state.count += 1
 
+st.button("Next")
 
 st.write(st.session_state)
 
