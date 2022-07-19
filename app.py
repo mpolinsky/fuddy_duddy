@@ -14,6 +14,7 @@ if 'res' not in st.session_state:
 if 'count' not in st.session_state:
 	st.session_state.count = 0
 	st.write("ONE TIME")
+	st.session_state.name = 'nameomane'
 
 # Create a button which will increment the counter
 increment = st.button('Increment')
