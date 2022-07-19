@@ -5,11 +5,14 @@ st.title('Counter Example')
 # Streamlit runs from top to bottom on every iteraction so
 # we check if `count` has already been initialized in st.session_state.
 
+if 'word_pool' not in st.session_state:
+    st.session_state.word_pool = [i for i in ew.english_words_lower_alpha_set if len(i) > 3][::5]
+
 if 'res' not in st.session_state:
-	st.session_state.res = list()
+    st.session_state.res = list()
 
 if 'choice' not in st.session_state:
-	st.session_state.choice = ''
+    st.session_state.choice = ''
 
 # If no, then initialize count to 0
 # If count is already initialized, don't do anything
