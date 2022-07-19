@@ -47,7 +47,7 @@ if 'count' not in st.session_state:
 if 'name' not in st.session_state or st.session_state.name == "":
     st.session_state.name = st.text_input("Enter name")
 	
-if 'counter' not in st.session_state:
+if 'counter1' not in st.session_state:
     st.session_state.counter1 = Co(st.session_state.name)
 
 
@@ -65,7 +65,7 @@ st.session_state.res.append(st.session_state.choice)
 st.subheader(st.session_state.counter1)
 if st.session_state.count > 1:
 	st.session_state.counter1 -= Co(st.session_state.res[st.session_state.count])
-st.subheader(st.session_state.counter1)
+	
 st.session_state.count += 1
 
 st.button("Next")
