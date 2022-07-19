@@ -45,7 +45,7 @@ option = st.selectbox(
 st.write('You selected:', option)
 
 st.session_state.choice = option	
-st.session_state.res.append(option)
+st.session_state.res.append(st.session_state.choice)
 
 st.write(st.session_state)
 
