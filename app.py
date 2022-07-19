@@ -38,7 +38,7 @@ st.write('Count = ', st.session_state.count)
 if st.session_state.count > 5:
 	
     st.session_state.res.append('red')
-with form(key=str(dt.now())):	
+with st.form(key=str(dt.now())):	
 	option = st.selectbox(
 	    'Select:',
 	    st.session_state.word_pool)
