@@ -30,7 +30,7 @@ def shrink_pool(current_name_counter, word_pool):
 # we check if `count` has already been initialized in st.session_state.
 
 if 'word_pool' not in st.session_state:
-    st.session_state.word_pool = [i for i in ew.english_words_lower_alpha_set if len(i) > 3][::5]
+    st.session_state.word_pool = [i for i in ew.english_words_lower_alpha_set if len(i) > 3]
 
 if 'res' not in st.session_state:
     st.session_state.res = list()
