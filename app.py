@@ -58,6 +58,9 @@ if 'counter1' not in st.session_state:
 
 reset_counter(st.session_state.name)
 
+if count > 2:
+    st.session_state.res = st.session_state.res[:-1]
+
 st.write('Count = ', st.session_state.count)
 
 option = st.selectbox(
