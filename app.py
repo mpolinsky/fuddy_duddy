@@ -73,6 +73,7 @@ with st.form(key=str(dt.now())):
 	'Select:',
 	shrink_pool(st.session_state.counter_1, st.session_state.word_pool)
 	)
+	st.write(f"You chose {option}")
 	submit = st.form_submit_button("submit")
 	if submit:
 		st.write('You selected:', option)
