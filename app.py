@@ -14,7 +14,7 @@ option = st.selectbox(
      ('Email', 'Home phone', 'Mobile phone'))
 
 st.write('You selected:', option)
-	
+st.session_state.choice=option	
 	
 
 # If no, then initialize count to 0
@@ -23,7 +23,7 @@ if 'count' not in st.session_state:
     st.session_state.count = 0
     st.write("ONE TIME")
     
-	
+st.write(st.session_state.choice)
 st.session_state.name = st.text_input('nameo: ')
 # Create a button which will increment the counter
 increment = st.button('Increment')
