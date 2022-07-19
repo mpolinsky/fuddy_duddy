@@ -41,8 +41,8 @@ if st.session_state.count > 5:
 option = st.selectbox(
      'How would you like to be contacted?',
      ('Email', 'Home phone', 'Mobile phone'))
-if 'choice' in st.session_state:
-	st.write('You selected:', option)
+st.write('You selected:', option)
+if 'choice' not in st.session_state:
 	st.session_state.choice=option	
 
 
