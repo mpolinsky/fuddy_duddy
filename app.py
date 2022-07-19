@@ -12,9 +12,9 @@ if 'res' not in st.session_state:
 # If no, then initialize count to 0
 # If count is already initialized, don't do anything
 if 'count' not in st.session_state:
-	st.session_state.count = 0
-	st.write("ONE TIME")
-	st.session_state.name = st.text_input('nameo: ')
+    st.session_state.count = 0
+    st.write("ONE TIME")
+    st.session_state.name = st.text_input('nameo: ')
 	
 
 # Create a button which will increment the counter
@@ -29,7 +29,7 @@ if decrement:
 
 
 st.write('Count = ', st.session_state.count)
-st.write(st.session_state.name)
+st.write(st.session_state)
 
 if st.session_state.count > 5:
     st.session_state.res.append('red')
