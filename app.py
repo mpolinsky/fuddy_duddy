@@ -44,7 +44,7 @@ if 'count' not in st.session_state:
     st.session_state.count = 0
     st.write("ONE TIME")
 
-if 'name' not in st.session_state:
+if 'name' not in st.session_state or st.session_state.name == "":
     st.session_state.name = st.text_input("Enter name")
 	
 if 'counter' not in st.session_state:
