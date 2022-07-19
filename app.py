@@ -8,6 +8,8 @@ st.title('Counter Example')
 if 'res' not in st.session_state:
 	st.session_state.res = list()
 
+if 'choice' not in st.session_state:
+	st.session_state.choice = ''
 
 # If no, then initialize count to 0
 # If count is already initialized, don't do anything
@@ -44,8 +46,7 @@ option = st.selectbox(
 
 st.write('You selected:', option)
 
-if 'choice' not in st.session_state:
-    st.session_state.choice=option	
+st.session_state.choice = option	
 
 
 st.write(st.session_state.res)
