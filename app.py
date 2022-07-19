@@ -62,8 +62,10 @@ st.write(f"You chose {option}")
     
 st.session_state.choice = option	
 st.session_state.res.append(st.session_state.choice)
+st.subheader(st.session_state.counter)
 if st.session_state.count > 1:
 	st.session_state.counter -= Co(st.session_state.res[st.session_state.count])
+st.subheader(st.session_state.counter)
 st.session_state.count += 1
 
 st.button("Next")
