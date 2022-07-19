@@ -32,9 +32,7 @@ def reset_counter(a_name):
 
 
 
-# Streamlit runs from top to bottom on every iteraction so
-# we check if `count` has already been initialized in st.session_state.
-
+# Streamlit runs from top to bottom on every iteraction so we check the state
 if 'word_pool' not in st.session_state:
     st.session_state.word_pool = [i for i in ew.english_words_lower_alpha_set if len(i) > 3]
 
@@ -58,7 +56,7 @@ if 'counter1' not in st.session_state:
 
 reset_counter(st.session_state.name)
 
-if count > 2:
+if st.session_state.count > 2:
     st.session_state.res = st.session_state.res[:-1]
 
 st.write('Count = ', st.session_state.count)
