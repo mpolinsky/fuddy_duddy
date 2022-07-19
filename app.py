@@ -23,11 +23,13 @@ if 'count' not in st.session_state:
     st.session_state.count = 0
     st.write("ONE TIME")
 
+if 'name' not in st.session_state:
+    st.session_state.name = st.text_input("Enter name")
+	
 if 'counter' not in st.session_state:
     st.session_state.counter_1 = Co(st.session_state.name)
 	
-if 'name' not in st.session_state:
-    st.session_state.name = st.text_input("Enter name")
+
 
 
 # Create a button which will increment the counter
