@@ -3,7 +3,28 @@ import english_words as ew
 from datetime import datetime as dt
 from collections import Counter as Co
 
-st.title('Counter Example')
+
+
+
+# check for presence and number of letters to eliminate invalid words
+def letter_check(current_name_counter, candidate_word):
+    word_count = Co(candidate_word)
+    for letter, count in word_count.items():
+        if count > current_name_counter.get(letter, -1):
+            return False
+    return True
+
+
+# Keep words that pass the letter_check
+def shrink_pool(current_name_counter, word_pool):
+    st.write(f"current counter: {current_name_counter}")
+    st.write(f"wordpool len: {len(word_pool)}")
+    newpool = [i for i in word_pool if letter_check(current_name_counter, i)]
+    newpool.sort(key=len, reverse=True)
+    st.write(f"in shrink pool: returned pool size is {len(newpool)}")
+    return newpool
+
+
 
 # Streamlit runs from top to bottom on every iteraction so
 # we check if `count` has already been initialized in st.session_state.
