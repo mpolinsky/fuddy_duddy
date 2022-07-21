@@ -11,6 +11,9 @@ if 'hello' not in st.session_state:
 if 'nums' not in st.session_state:
   st.session_state.nums = [1,2,3,4,5]
   
+if 'accumulator' not in st.session_state:
+  st.session_state.accumulator = list()
+  
 #with st.form(key=str(dt.now())):
 st.session_state.hello = st.selectbox("Select:", options=st.session_state.nums)
   #st.subheader(selection)
@@ -18,7 +21,7 @@ st.session_state.hello = st.selectbox("Select:", options=st.session_state.nums)
   #if submit:
     #st.header("HELLO WORLD")
     #st.session_state.hello = 99999
-st.session_state.nums.append(st.session_state.hello)
+st.session_state.accumulator.append(st.session_state.hello)
     
 st.header(st.session_state.hello)
 
