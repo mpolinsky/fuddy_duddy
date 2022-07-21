@@ -3,13 +3,16 @@ import english_words as ew
 from datetime import datetime as dt
 from collections import Counter as Co
 
+def assign(inwo):
+  st.session_state.hello = inwo
+
 if 'hello' not in st.session_state:
   st.session_state.hello = ''
-
+  
 with st.form(key=str(dt.now())):
   optio = st.selectbox("Select:", options=[1,2,3,4,5])
   st.subheader(optio)
-  submit = st.form_submit_button("Submit")
+  submit = st.form_submit_button("Submit", on_click=assign)
 if submit:
   st.header("HGELOOOO")
   st.session_state.hello = 99
