@@ -9,3 +9,6 @@ with st.form(key=str(dt.now())):
   submit = st.form_submit_button("Submit")
   if submit:
     st.header("HGELOOOO")
+    st.session_state.hello = 99
+    
+st.header(st.session_state.hello)
