@@ -6,7 +6,7 @@ def assign(arg):
   st.session_state.hello = arg
 
 if 'word_pool' not in st.session_state:
-    st.session_state.word_pool = [i for i in ew.english_words_lower_alpha_set if len(i) > 3][:20]
+    st.session_state.word_pool = [i for i in ew.english_words_lower_alpha_set if len(i) > 3][:200]
   
 if 'hello' not in st.session_state:
   st.session_state.hello = 55555
@@ -25,5 +25,8 @@ st.session_state.hello = st.selectbox("Select:", options=st.session_state.word_p
 st.session_state.accumulator.append(st.session_state.hello)
     
 st.header(st.session_state.hello)
+
+st.session_state.word_pool = st.session_state.word_pool[:-10]
+
 
 st.session_state
