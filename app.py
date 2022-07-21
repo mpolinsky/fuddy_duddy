@@ -15,3 +15,5 @@ if submit:
   st.session_state.hello = 99
     
 st.header(st.session_state.hello)
+
+st.session_state
