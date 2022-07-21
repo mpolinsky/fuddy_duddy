@@ -19,4 +19,3 @@ with st.form(key=str(dt.now())):
 st.header(st.session_state.hello)
 
 st.session_state
-s
