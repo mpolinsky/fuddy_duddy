@@ -5,17 +5,18 @@ from datetime import datetime as dt
 def assign(arg):
   st.session_state.hello = arg
 
+if 'word_pool' not in st.session_state:
+    st.session_state.word_pool = [i for i in ew.english_words_lower_alpha_set if len(i) > 3][:20]
+  
 if 'hello' not in st.session_state:
   st.session_state.hello = 55555
   
-if 'nums' not in st.session_state:
-  st.session_state.nums = [1,2,3,4,5]
   
 if 'accumulator' not in st.session_state:
   st.session_state.accumulator = list()
   
 #with st.form(key=str(dt.now())):
-st.session_state.hello = st.selectbox("Select:", options=st.session_state.nums)
+st.session_state.hello = st.selectbox("Select:", options=st.session_state.word_pool)
   #st.subheader(selection)
   #submit = st.form_submit_button("Submit", on_click=assign, args=(selection,))
   #if submit:
