@@ -12,7 +12,7 @@ if 'hello' not in st.session_state:
 with st.form(key=str(dt.now())):
   optio = st.selectbox("Select:", options=[1,2,3,4,5])
   st.subheader(optio)
-  submit = st.form_submit_button("Submit", on_click=assign)
+  submit = st.form_submit_button("Submit", on_click=assign, args=(optio,))
 if submit:
   st.header("HGELOOOO")
   st.session_state.hello = 99
