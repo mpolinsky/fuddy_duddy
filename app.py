@@ -4,9 +4,7 @@ import english_words as ew
 
 
 
-#st.header("This is the [link you want.] (https://www.npr.org)")
-#st.subheader("This is the [link you want.] (https://www.npr.org)")
-st.write("This is the [link](https://www.npr.org)")
+st.write("This is the [link](https://www.npr.org) [another](https://www.cnn.com)")
 
 
 st.session_state
