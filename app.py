@@ -4,7 +4,7 @@ import english_words as ew
 
 
 
-st.write("This is the [link](https://www.npr.org) [another](https://www.cnn.com)")
+st.subheader("This is the [link](https://www.npr.org) [another](https://www.cnn.com)")
 
 
 st.session_state
