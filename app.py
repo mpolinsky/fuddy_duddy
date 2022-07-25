@@ -1,10 +1,7 @@
 import streamlit as st
-from datetime import datetime as dt
-import english_words as ew
 
-
-
-st.subheader("This is the [link](https://www.npr.org) [another](https://www.cnn.com)")
-
+with st.beta_expander("Hi Charly"):
+    if st.checkbox("Fake expand"):
+        st.write("Hello world")
 
 st.session_state
