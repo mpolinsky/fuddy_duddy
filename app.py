@@ -1,6 +1,6 @@
 import streamlit as st
 
-with st.beta_expander("Hi Charly"):
+with st.expander("Hi Charly"):
     if st.checkbox("Fake expand"):
         st.write("Hello world")
 
