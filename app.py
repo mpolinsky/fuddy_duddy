@@ -11,10 +11,11 @@ if 'word_pool' not in st.session_state:
 if 'hello' not in st.session_state:
   st.session_state.hello = 55555
   
-  
 if 'accumulator' not in st.session_state:
   st.session_state.accumulator = list()
   
+  
+st.session_state.word_pool.insert(0,"None") 
 #with st.form(key=str(dt.now())):
 st.session_state.hello = st.selectbox("Select:", options=st.session_state.word_pool)
   #st.subheader(selection)
@@ -26,7 +27,7 @@ st.session_state.accumulator.append(st.session_state.hello)
     
 st.header(st.session_state.hello)
 
-st.session_state.word_pool = st.session_state.word_pool[:-10]
+st.session_state.word_pool = st.session_state.word_pool[1:]
 
 
 st.session_state
