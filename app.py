@@ -19,11 +19,11 @@ if 'accumulator' not in st.session_state:
 st.session_state.word_pool.insert(0,None) 
 with st.form(key=str(dt.now())):
   selection= st.selectbox("Select:", options=st.session_state.word_pool)
-    st.subheader(selection)
-    submit = st.form_submit_button("Submit", on_click=assign, args=(selection,))
-    if submit:
-      st.header("HELLO WORLD")
-      st.session_state.hello = 99999
+  st.subheader(selection)
+  submit = st.form_submit_button("Submit", on_click=assign, args=(selection,))
+  if submit:
+    st.header("HELLO WORLD")
+    st.session_state.hello = 99999
 if selection is not None:
   st.session_state.hello = selection
   st.session_state.accumulator.append(st.session_state.hello)
