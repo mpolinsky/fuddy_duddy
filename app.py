@@ -26,7 +26,7 @@ selection= st.selectbox("Select:", options=st.session_state.word_pool)
     #st.session_state.hello = 99999
 if selection is not None:
   st.session_state.hello = selection
-st.session_state.accumulator.append(st.session_state.hello)
+  st.session_state.accumulator.append(st.session_state.hello)
 st.session_state.count += 1
     
 st.header(st.session_state.hello)
