@@ -27,7 +27,7 @@ st.session_state.accumulator.append(st.session_state.hello)
     
 st.header(st.session_state.hello)
 
-st.session_state.word_pool = st.session_state.word_pool[1:]
+st.session_state.word_pool = st.session_state.word_pool[:-10]
 
 
 st.session_state
