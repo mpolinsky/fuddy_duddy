@@ -16,7 +16,7 @@ if 'accumulator' not in st.session_state:
   st.session_state.accumulator = list()
   
 if st.session_state.count < 2:
-  st.session_state.word_pool.insert(0,"None") 
+  st.session_state.word_pool.insert(0,None) 
   #with st.form(key=str(dt.now())):
   selection= st.selectbox("Select:", options=st.session_state.word_pool)
     #st.subheader(selection)
