@@ -10,20 +10,22 @@ if 'word_pool' not in st.session_state:
   
 if 'hello' not in st.session_state:
   st.session_state.hello = 55555
+  st.session_state.count = 0
   
 if 'accumulator' not in st.session_state:
   st.session_state.accumulator = list()
   
-  
-st.session_state.word_pool.insert(0,"None") 
-#with st.form(key=str(dt.now())):
-st.session_state.hello = st.selectbox("Select:", options=st.session_state.word_pool)
-  #st.subheader(selection)
-  #submit = st.form_submit_button("Submit", on_click=assign, args=(selection,))
-  #if submit:
-    #st.header("HELLO WORLD")
-    #st.session_state.hello = 99999
-st.session_state.accumulator.append(st.session_state.hello)
+while st.session_state.count < 2:
+  st.session_state.word_pool.insert(0,"None") 
+  #with st.form(key=str(dt.now())):
+  st.session_state.hello = st.selectbox("Select:", options=st.session_state.word_pool)
+    #st.subheader(selection)
+    #submit = st.form_submit_button("Submit", on_click=assign, args=(selection,))
+    #if submit:
+      #st.header("HELLO WORLD")
+      #st.session_state.hello = 99999
+  st.session_state.accumulator.append(st.session_state.hello)
+  st.session_state.count += 1
     
 st.header(st.session_state.hello)
 
