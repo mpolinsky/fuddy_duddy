@@ -7,5 +7,4 @@ st.button(label = "Tweet", components.html("""<a class='twitter-share-button'
 			data-url='https://streamlit.io'
 			data-show-count='false'>Tweet Here</a>
 			<script src='https://platform.twitter.com/widgets.js' charset='utf-8'></script>
-			""")
-	 )
+			"""))
